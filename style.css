@@ -8,6 +8,17 @@
   font-style: normal;
   
 }
+main{
+    max-width: 1440px;
+    margin:0 auto ;
+}
+main > section{
+    margin-top: 130px;
+}
+.section-title{
+    font-size:2.8rem;
+    font-weight: 700;
+}
 .navbar{
     justify-content:space-between;
     align-items: center;
@@ -30,6 +41,9 @@
 }
 .text-gray{
     color: #424242;
+}
+.text-primary{
+    color: #FF900E;
 }
 .text-light-gray{
      color: #727272;
@@ -63,10 +77,110 @@
 .banner-image{
     width:100%;
 }
+.teams{
+    align-items: center;
+}
+.team-img-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 24px;
+
+}
+
+.our-features{
+    margin-left:130px;
+    max-width: 530px;
+}
+
+
+#Quick-list{
+    font-weight: 500;
+
+}
+.facts-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.fact-card{
+    border: 1px solid #FF900E;
+    width: 240px;
+    height: 240px;
+    border-radius: 8px;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 40px;
+}
+
+.fact-number{
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.fact-name{
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.our-sponsors{
+    max-width: 540px;
+    margin: 50px auto;
+    text-align: center;
+}
+.Sponspor-companies{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap: 50px;
+    
+}
+.Sponspor-companies img{
+    filter: grayscale(100%);
+}
+#reature-section-title{
+    border-left: 5px solid #FF900E;
+    padding: 20px;
+}
+.Feature-card .Feature-title{
+    font-weight:600 ;
+    font-size: 1.25rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
+   
+}
+.Feature-card{
+     padding: 30px;
+    box-shadow: 0 4px 30px 0 rgba(30, 30, 30, 1);
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+.Features{
+    gap:100px;
+}
+
+
 
 /* responsive media query */
 @media screen and (max-width: 576px){
-    .navbar, .nav-link{
+    .navbar, .nav-link, .teams{
         flex-direction: column;
     }
+    .team-img-container,.facts-container .Sponspor-companies {
+    grid-template-columns: repeat(1,1fr);
+}
+.facts-container .Sponspor-companies{
+    justify-items: center;
+    gap: 24px;
+}
+}
+   
+
+
+@media screen and (min-width: 576) and (max-width: 992px;){
+    .teams{
+        flex-direction: column;
+    }
+}
+.our-features{
+    margin: 50px auto;
 }
